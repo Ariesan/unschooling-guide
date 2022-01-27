@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-primary: 'Source Sans Pro', sans-serif;
+  --ff-secondary: 'Source Code Pro', monospace;
+
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  --clr-light: #fff;
+  --clr-dark: #030e12;
+  --clr-grey: #303030;
+  --clr-accent: #5bccf6;
+
+  --fs-h1: 1.3rem;
+  --fs-h2: 1.1rem;
+  --fs-h3: 0.95rem;
+  --fs-body: 0.75rem;
+}
+@media (min-width: 800px) {
+  :root {
+    --fs-h1: 2rem;
+    --fs-h2: 1.8rem;
+    --fs-h3: 1.1rem;
+    --fs-body: 0.9rem;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: linear-gradient(
+    to left top,
+    #5bccf6,
+    #a5ceff,
+    #d7d2fb,
+    #f3dbf2,
+    #fde9ef
+  );
+  color: var(--clr-dark);
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+section {
+  padding: 0.5em;
+}
+strong {
+  font-weight: var(--fw-bold);
+}
+.nav-header {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  padding: 0.3em; 
+}
+
+header {
+  font-size: var(--fs-h2);
+  text-transform: capitalize;
+  background: var(--clr-accent);
+  border-radius: 15px;
+  text-align: center;
+}
+q {
+  font-size: var(--fs-h3);
+}
+li {
+  font-weight: var(--fw-bold);
+}
+.nav-item {
+  list-style: none;
+  text-transform: uppercase;
+}
+.nav-link {
+  color: inherit;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-body);
+  text-decoration: none;
+}
+#navbar article {
+  padding: 1em 2em;
+}
+.nav-link:hover {
+  color: var(--clr-light);
+}
+
+.footer {
+  text-align: center;
+  background: var(--clr-accent);
+  margin-top: 2em;
+  padding: 0.5em;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.footer a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: var(--fw-bold);
+}
+
+.footer a:hover {
+ color: var(--clr-light);
+}
+
+@media (min-width: 900px) {
+  #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 100%;
+  }
+  #main-doc {
+    margin-left: 450px;
+  }
+}
+@media (max-width: 900px) {
+ .nav-header {
+  text-align: center;
+  background: var(--clr-accent);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-radius: unset;
+ 
+ }
+.nav {
+  background: var(--clr-accent);
+  position: fixed;
+  top: 2.5em;
+  width: 100%;
+  padding-top: 10px;
+  display: flex;
+ justify-content: center;
+ flex-flow: wrap;
+ }
+
+.nav-item {
+ margin-right: 20px;
+} 
+.main-section {
+ margin-top: .5em; 
+ margin-bottom: .7em;
+}
+}
